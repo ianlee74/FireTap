@@ -1,8 +1,8 @@
-outer_dia = 141.5;
+outer_dia = 140.5;
 inner_dia = 93.0;
 center_dia = inner_dia/2 + (outer_dia-inner_dia)/4;
 
-height = 12.0;
+height = 10.0;
 
 screw_dia = 4.0;
 
@@ -35,11 +35,11 @@ module screwBlock()
 {
 	difference()
 	{
-		translate([0, inner_dia/2 - 12.5 + fudge])
-#			cube([35.0, 25.0, height], center=true);
+		translate([0, inner_dia/2 - 11.5 + fudge])
+#			cube([35.0, 23.0, height], center=true);
 			
-		translate([0, inner_dia/2 - 15.5 - screw_dia/2])
-			cylinder(h=height+fudge*2, r=screw_dia/2, $fn=100);
+		translate([0, inner_dia/2 - 14.5 - screw_dia/2])
+			cylinder(h=height+fudge*2, r=screw_dia/2, center=true, $fn=100);
 	}
 }
 
